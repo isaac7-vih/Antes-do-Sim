@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes do Sim ❤️</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+<!-- Barra de progresso -->
+<div class="barra-progresso">
+    <div class="preencher" id="barra"></div>
+</div>
+
+<!-- Estrelas de fundo -->
+<div id="fundo-estrelas"></div>
+
+<!-- Tela 1: Abertura -->
+<section class="tela ativa" id="abertura">
+    <div class="conteudo">
+        <p class="texto-entrada">Toda grande história tem um começo...</p>
+        <p class="texto-entrada">Essa é a nossa.</p>
+        <button class="botao" onclick="proximaTela()">Começar ✨</button>
+    </div>
+</section>
+
+<!-- Tela 2: Contador -->
+<section class="tela" id="contador">
+    <div class="conteudo">
+        <h2>Estamos juntos há...</h2>
+        <div class="numero" id="tempo"></div>
+        <p>E cada segundo valeu muito a pena.</p>
+        <button class="botao" onclick="proximaTela()">Continuar ❤️</button>
+    </div>
+</section>
+
+<!-- Tela 3: Linha do Tempo -->
+<section class="tela" id="historia">
+    <div class="conteudo">
+        <h2>Nossa História 📖</h2>
+        <div class="linha-tempo">
+            <div class="linha-tempo">
+    <div class="item">
+        <span class="marcador">Primeira conversa</span>
+        <div class="foto-linha">
+  <img src="h1.jpg?v=1" alt="Nossa primeira conversa">
+  <p>O momento em que eu percebi que tinha encontrado alguém especial.</p>
+</div>
+    </div>
+    <div class="item">
+        <span class="marcador">Nossa primeira foto</span>
+        <div class="foto-linha">
+  <img src="h2.jpg?v=1" alt="Nossa primeira foto">
+  <p>O primeiro registro de um amor que já nasceu para ser eterno.</p>
+</div>
+    </div>
+    <div class="item">
+        <span class="marcador">Primeiro "Eu te amo"</span>
+        <div class="foto-linha">
+  <img src="h3.jpg?v=1" alt="Primeiro Eu te amo">
+  <p>A frase que mudou o meu mundo para sempre.</p>
+</div>
+    </div>
+    <div class="item">
+        <span class="marcador">Primeiro beijo</span>
+        <div class="foto-linha">
+  <img src="h4.jpg?v=1" alt="Primeiro beijo">
+  <p>O momento em que eu tive certeza absoluta: era você.</p>
+</div>
+    </div>
+    <div class="item">
+        <span class="marcador">Por quem eu me apaixonei</span>
+        <div class="foto-linha">
+  <img src="h5.jpg?v=1" alt="Por quem eu me apaixonei">
+  <p>Por você, minha vida, meu amor e todo o meu futuro.</p>
+</div>
+
+        </div>
+        <button class="botao" onclick="proximaTela()">Continuar 🎵</button>
+    </div>
+</section>
+
+<!-- Tela 4: Música -->
+<section class="tela" id="musica">
+    <div class="conteudo">
+        <h2>Nossa Música 🎵</h2>
+        <div class="caixa-musica">
+            <div class="capa-musica"></div>
+            <p class="nome-musica">[Nome da Música] - [Artista]</p>
+            <audio controls>
+                <source src="musica.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            
+            <p class="frase-musica">A melodia que faz lembrar de nós.</p>
+        </div>
+        <button class="botao" onclick="proximaTela()">Continuar 📸</button>
+    </div>
+</section>
+
+<!-- Tela 5: Galeria -->
+<section class="tela" id="galeria">
+    <div class="conteudo">
+        <h2>Nossos Momentos 📷</h2>
+        <div class="grade-fotos">
+            <div class="foto">
+                <div class="espaco-foto"></div>
+                <p>Cada detalhe seu me faz amar mais.</p>
+            </div>
+            <div class="foto">
+                <div class="espaco-foto"></div>
+                <p>Meu lugar favorito é ao seu lado.</p>
+            </div>
+        </div>
+        <button class="botao" onclick="proximaTela()">Continuar 💌</button>
+    </div>
+</section>
+
+<!-- Tela 6: Carta -->
+<section class="tela" id="carta">
+    <div class="conteudo">
+        <h2>Para Você 💌</h2>
+        <div class="texto-carta" id="texto-carta"></div>
+        <button class="botao" id="btn-carta" onclick="proximaTela()" style="display:none;">Continuar ❤️</button>
+    </div>
+</section>
+
+<!-- Tela 7: Pedido -->
+<section class="tela" id="pedido">
+    <div class="conteudo">
+        <p class="pergunta">Depois de tudo isso...</p>
+        <p class="pergunta">Só existe uma pergunta.</p>
+        <h1 class="pedido">Você aceita ficar comigo para sempre?</h1>
+        <div class="botoes">
+            <button class="botao-sim" onclick="aceitou()">❤️ Sim</button>
+            <button class="botao-sim" onclick="aceitou()">❤️ Com todo o meu coração</button>
+        </div>
+    </div>
+</section>
+
+<!-- Tela 8: Final -->
+<section class="tela" id="final">
+    <div class="conteudo">
+        <h1>Você fez eu ser o homem mais feliz do mundo! 🥹</h1>
+
+        <!-- PRIMEIRO A FOTO -->
+        <div class="foto-final">
+            <img src="papal.jpg?v=1" alt="Nós dois">
+        </div>
+
+        <!-- DEPOIS O TEXTO NO PAPEL -->
+        <div class="texto-no-papel" id="texto-final"></div>
+    </div>
+</section>
+<script src="script.js?v=3"></script>
+</body>
+</html>
