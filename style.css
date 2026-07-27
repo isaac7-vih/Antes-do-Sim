@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top, #1a150b 0%, #0a0805 50%, #000000 100%);
+    color: #f0e6c8;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', serif;
+    position: relative;
+}
+
+.barra-progresso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 215, 0, 0.1);
+    z-index: 999;
+}
+.preencher {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #b8860b, #ffd700);
+    transition: width 1s ease;
+}
+
+.estrela {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: brilho 2.5s infinite alternate ease-in-out;
+}
+@keyframes brilho {
+    0% { opacity: 0.15; transform: scale(0.7); }
+    100% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 6px #ffd700; }
+}
+
+.tela {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.5s ease;
+    padding: 20px;
+    overflow-y: auto;
+}
+.tela.ativa {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.texto-entrada {
+    font-size: 1.6rem;
+    margin: 12px 0;
+    color: #ffd700;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+.ativa .texto-entrada:nth-child(1) { transition-delay: 0.5s; opacity: 1; }
+.ativa .texto-entrada:nth-child(2) { transition-delay: 1.5s; opacity: 1; }
+
+h2 {
+    font-size: 1.9rem;
+    margin-bottom: 25px;
+    color: #ffd700;
+    letter-spacing: 1px;
+}
+
+.numero {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #ffec99;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+.botao {
+    margin-top: 30px;
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    border: 1px solid #b8860b;
+    background: rgba(184, 134, 11, 0.15);
+    color: #ffd700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.botao:hover {
+    background: rgba(255, 215, 0, 0.25);
+    transform: scale(1.05);
+}
+.linha-tempo {
+    border-left: 2px solid #b8860b;
+    margin: 30px auto;
+    padding: 0 0 0 20px;
+    text-align: left;
+    overflow: visible;
+}
+.item {
+    margin-bottom: 35px;
+}
+.marcador {
+    font-weight: 500;
+    color: #ffec99;
+}
+.foto-linha {
+  width: 100%;
+  height: auto; /* SEM ALTURA FIXA NENHUMA! */
+  min-height: auto; /* TIRAMOS QUALQUER ALTURA MÍNIMA FORÇADA */
+  margin: 8px;
+  border-radius: 10px;
+  border: 1px solid #b8860b;
+  background: rgba(255, 215, 0, 0.05);
+  overflow: visible; /* MOSTRA TUDO, NÃO ESCONDE NADA */
+}
+
+.foto-linha img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  border-radius: 8px;
+}
+
+.caixa-musica {
+    border: 1px solid #b8860b;
+    border-radius: 15px;
+    padding: 25px;
+    background: rgba(10, 8, 5, 0.5);
+    margin-top: 15px;
+}
+.capa-musica-nova {
+  width: 220px;
+  height: auto;
+  border-radius: 10px;
+  margin: 0 auto 15px auto;
+  display: block;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+.nome-musica {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffec99;
+}
+.frase-musica {
+    font-style: italic;
+    color: #e6d5a8;
+    margin-top: 15px;
+}
+
+.grade-fotos {
+    display: grid;
+    gap: 18px;
+    margin-top: 20px;
+}
+.foto {
+    text-align: center;
+}
+.espaco-foto {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    border: 1px solid #b8860b;
+    margin-bottom: 8px;
+    background: rgba(255, 215, 0, 0.05);
+}
+.foto p {
+    font-style: italic;
+    color: #e6d5a8;
+}
+
+.texto-carta {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #f0e6c8;
+    text-align: left;
+    padding: 25px 20px;
+    border: 1px solid #b8860b;
+    border-radius: 12px;
+    background: rgba(10, 8, 5, 0.5);
+    min-height: 220px;
+    margin-top: 15px;
+    white-space: pre-wrap;
+    word-spacing: 3px;
+}
+
+.pergunta {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #ffec99;
+}
+.pedido {
+    font-size: 2.2rem;
+    margin: 30px 0;
+    color: #ffd700;
+    line-height: 1.4;
+}
+.botoes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.botao-sim {
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    background: #b8860b;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.botao-sim:hover {
+    background: #ffd700;
+    color: #000;
+    transform: scale(1.08);
+}
+.texto-no-papel {
+    background: #f8f0dc;
+    color: #2b2010;
+    padding: 35px 30px;
+    margin: 25px auto;
+    max-width: 460px;
+    border-radius: 6px;
+    box-shadow: 
+        0 0 0 1px rgba(184, 134, 11, 0.2),
+        0 8px 25px rgba(0, 0, 0, 0.25);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.2rem;
+    line-height: 1.9;
+    text-align: center;
+    transform: rotate(-0.2deg);
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+.foto-final {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 25px auto;
+    border-radius: 12px;
+    border: 2px solid #b8860b;
+    box-shadow: 0 0 15px rgba(184, 134, 11, 0.3);
+}
+.foto-final img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+.caixa-musica {
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 320px;
+  border-radius: 12px;
+  background: rgba(255, 215, 0, 0.08);
+  border: 1px solid #b8860b;
+}
+
+.nome-musica {
+  color: #ffd700;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+audio {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.frase-musica {
+  color: #ffec99;
+  font-style: italic;
+  font-size: 1rem;
+}
