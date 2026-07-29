@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Antes do Sim ✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Barra de progresso animada -->
+<div class="barra-progresso">
+    <div class="preencher" id="barra"></div>
+</div>
+
+<!-- Fundo de estrelas em camadas -->
+<div id="estrelas-fundo"></div>
+<div id="estrelas-meio"></div>
+<div id="estrelas-frente"></div>
+
+<!-- Tela 1: Abertura Cinematográfica -->
+<section class="tela ativa" id="abertura">
+    <div class="conteudo">
+        <h1 class="titulo-principal">ANTES DO SIM</h1>
+        <div class="linha-dourada"></div>
+        <p class="texto-entrada">Toda grande história tem um começo...</p>
+        <p class="texto-entrada">E a nossa começou no momento em que eu te vi.</p>
+        <button class="botao" onclick="proximaTela()">Começar nossa história ✨</button>
+    </div>
+</section>
+
+<!-- Tela 2: As Lembranças -->
+<section class="tela" id="lembrancas">
+    <div class="conteudo">
+        <h2 id="titulo-lembranca"></h2>
+        <p id="texto-lembranca" class="texto-digitar"></p>
+        <button class="botao" onclick="proximaTela()">Continuar 📖</button>
+    </div>
+</section>
+
+<!-- Tela 3: Contador de Amor -->
+<section class="tela" id="contador">
+    <div class="conteudo">
+        <h2>Estamos conectados há...</h2>
+        <div class="numero" id="tempo"></div>
+        <p>E cada segundo valeu a pena, porque você estava nele.</p>
+        <button class="botao" onclick="proximaTela()">Continuar ⏳</button>
+    </div>
+</section>
+
+<!-- Tela 4: Música -->
+<section class="tela" id="musica">
+    <div class="conteudo">
+        <h2>Música JP</h2>
+        <p>A melodia que tem a sua cara em cada nota.</p>
+        <audio id="audio" src="musica.jpg">
+        <div class="botoes-musica">
+            <button class="botao" onclick="tocarMusica()">▶️ Tocar</button>
+            <button class="botao" onclick="pausarMusica()">⏸️ Pausar</button>
+        </div>
+        <button class="botao" onclick="proximaTela()">Continuar 💌</button>
+    </div>
+</section>
+
+<!-- Tela 5: Primeira Carta -->
+<section class="tela" id="primeira-carta">
+    <div class="conteudo">
+        <div class="papel-carta">
+            <p id="texto-primeira-carta" class="texto-digitar"></p>
+        </div>
+        <button class="botao" onclick="proximaTela()">Continuar 💌</button>
+    </div>
+</section>
+
+<!-- Tela 6: Segunda Carta -->
+<section class="tela" id="segunda-carta">
+    <div class="conteudo">
+        <div class="papel-carta">
+            <p id="texto-segunda-carta" class="texto-digitar"></p>
+        </div>
+        <button class="botao" onclick="proximaTela()">Continuar 💍</button>
+    </div>
+</section>
+
+<!-- Tela 7: O Pedido -->
+<section class="tela" id="pedido">
+    <div class="conteudo">
+        <h2>Victoria...</h2>
+        <p>Depois de cada olhar, cada conversa, cada detalhe seu que eu guardei no coração...</p>
+        <p>Depois de cada segundo que me mostrou que você é a pessoa certa...</p>
+        <p>Você aceita escrever o resto dessa história comigo?</p>
+        <div class="botoes-pedido">
+            <button class="botao" onclick="proximaTela()">Sim ❤️</button>
+            <button class="botao" onclick="proximaTela()">Com toda certeza do mundo ✨</button>
+        </div>
+    </div>
+</section>
+
+<!-- Tela Final -->
+<section class="tela" id="final">
+    <div class="conteudo">
+        <h1 class="titulo-final">Eu sabia ❤️</h1>
+        <p>Hoje eu sou o homem mais feliz do universo.</p>
+        <p>Obrigado por existir e por escolher me amar.</p>
+        <p>Agora somos um coração só, para todo o sempre.</p>
+        <p class="assinatura">Seu, para sempre.</p>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

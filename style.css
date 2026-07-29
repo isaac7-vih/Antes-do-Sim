@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+body {
+    background: linear-gradient(180deg, #01030a 0%, #020817 50%, #050f2a 100%);
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.barra-progresso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: rgba(255,215,0,0.1);
+    z-index: 99999;
+}
+.preencher {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ffd700, #ffea00, #ffd700);
+    transition: width 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 0 15px rgba(255,215,0,0.6);
+}
+
+#estrelas-fundo, #estrelas-meio, #estrelas-frente {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.estrela {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: brilhar 3s infinite ease-in-out;
+}
+#estrelas-fundo .estrela { width: 1px; height: 1px; animation-duration: 4s; opacity: 0.3; }
+#estrelas-meio .estrela { width: 2px; height: 2px; animation-duration: 3s; opacity: 0.6; }
+#estrelas-frente .estrela { width: 3px; height: 3px; animation-duration: 2s; opacity: 1; box-shadow: 0 0 4px #fff; }
+@keyframes brilhar {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+.tela {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    z-index: 1;
+    animation: entrada 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes entrada {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.tela.ativa { display: flex; }
+.conteudo {
+    max-width: 92%;
+    text-align: center;
+    z-index: 2;
+}
+
+.titulo-principal {
+    font-size: 3.2rem;
+    color: #ffd700;
+    margin-bottom: 15px;
+    letter-spacing: 5px;
+    text-shadow: 0 0 30px rgba(255,215,0,0.7);
+}
+.linha-dourada {
+    width: 150px;
+    height: 2px;
+    background: #ffd700;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 0 15px rgba(255,215,0,0.5);
+}
+.texto-entrada {
+    font-size: 1.6rem;
+    margin: 15px 0;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    color: #f0f0ff;
+}
+h2 {
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+    color: #ffd700;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(255,215,0,0.5);
+}
+.numero {
+    font-size: 3.3rem;
+    font-weight: bold;
+    margin: 25px 0;
+    color: #ffd700;
+    text-shadow: 0 0 25px rgba(255,215,0,0.7);
+}
+.texto-digitar {
+    font-size: 1.3rem;
+    line-height: 2;
+    margin: 30px 0;
+    color: #f8f8ff;
+    min-height: 150px;
+}
+
+.papel-carta {
+    background: url('papel-fundo.jpg') center/cover no-repeat;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 50px rgba(255,215,0,0.35);
+    border: 1px solid rgba(255,215,0,0.4);
+    margin: 20px 0;
+    background-color: rgba(255,253,245,0.9);
+}
+
+.botoes-musica, .botoes-pedido {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.botao {
+    margin-top: 30px;
+    padding: 16px 45px;
+    font-size: 1.3rem;
+    background: transparent;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    z-index: 99999 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    letter-spacing: 1px;
+}
+.botao:hover {
+    background: #ffd700;
+    color: #020817;
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255,215,0,0.8);
+}
+
+.titulo-final {
+    font-size: 3.8rem;
+    color: #ffd700;
+    margin-bottom: 35px;
+    text-shadow: 0 0 40px rgba(255,215,0,0.8);
+}
+.assinatura {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    color: #ffd700;
+    font-style: italic;
+    text-shadow: 0 0 15px rgba(255,215,0,0.4);
+}
