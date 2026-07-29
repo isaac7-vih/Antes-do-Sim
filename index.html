@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <title>Antes do Sim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Céu estrelado em camadas -->
+<div id="estrelas-fundo"></div>
+<div id="estrelas-meio"></div>
+<div id="estrelas-frente"></div>
+
+<section class="tela ativa" id="abertura">
+    <div class="conteudo">
+        <h1>ANTES DO SIM</h1>
+        <div class="linha-dourada"></div>
+        <p class="texto-digitar" id="texto-abertura">Toda grande história tem um começo... e a nossa começou ali.</p>
+        <button class="botao" onclick="proximaTela()">Continuar ✨</button>
+    </div>
+</section>
+
+<section class="tela" id="lembrancas">
+    <div class="conteudo">
+        <h2 id="titulo-momento"></h2>
+        <p class="texto-digitar" id="texto-momento"></p>
+        <div class="grupo-botoes">
+            <button class="botao-pequeno" onclick="proximoTexto()">Próxima lembrança</button>
+            <button class="botao" onclick="proximaTela()">Próxima etapa</button>
+        </div>
+    </div>
+</section>
+
+<section class="tela" id="contador">
+    <div class="conteudo">
+        <h2>Estamos conectados há...</h2>
+        <div class="tempo" id="contador-tempo"></div>
+        <p>E cada segundo valeu a pena.</p>
+        <button class="botao" onclick="proximaTela()">Continuar</button>
+    </div>
+</section>
+
+
+<section class="tela" id="carta">
+    <div class="conteudo">
+        <div class="papel">
+            <p class="texto-digitar" id="texto-carta"></p>
+        </div>
+        <button class="botao" onclick="proximaTela()">Continuar</button>
+    </div>
+</section>
+
+<section class="tela" id="pedido">
+    <div class="conteudo">
+        <h2>Victoria...</h2>
+        <p>Depois de cada detalhe, cada olhar, cada momento...</p>
+        <div class="grupo-botoes">
+            <button class="botao" onclick="aceitou()">Sim ❤️</button>
+            <button class="botao" onclick="aceitou()">Com toda certeza ✨</button>
+        </div>
+    </div>
+</section>
+
+<div id="chuva-coracoes"></div>
+
+<section class="tela" id="final">
+    <div class="conteudo">
+        <h2>Eu sabia ❤️</h2>
+        <p class="texto-digitar" id="texto-final"></p>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
